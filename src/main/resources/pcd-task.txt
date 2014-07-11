@@ -1,0 +1,63 @@
+1. attend English classes and show progress – aim (upper-intermediate)
+
+2. Install sonar, improve code quality with it(write code quality parameters in google docs an share with Iuriy, so he can track them)
+
+3. Pass training on databases on any of available resources:
+   coursera,
+   brainbench,
+   quizfull
+   sql.ru;
+
+4. Know basic design patterns(12 out of 24 standard), practically implement:
+   • Training project was created using the following patterns:
+         bridge
+         adapter                 524 / 229, 235, 307, 448, 526, 569
+         abstract factory
+         factory method          239, 414, 446, 666
+         template method         264, 408, 475, 616, 696, 842, 919, 923
+         proxy                   422
+         state                   214
+         strategy                226, 234, 526, 547, 558, 559, 648, 653, 743, 889
+         mediator
+         builder                 Bloch???
+         composite
+      +  decorator               512
+
+   •  UML diagrams(class && sequence) should be created for each pattern;
+   •  Use your own implementation, do not copy-paste from inet
+
+   ------------------------------
+   ------------------------------
+
+      adapter method          307
+      chain of responsibility 743
+      Command                 268, 429, 739, 805
+      Data Transfer Object (Messenger idiom) · 442, 571, 617
+      Façade                  411
+      Flyweight               573, 935;
+      Iterator                246, 287;
+      Visitor                 775
+
+
+
+
+5. Pass training for JavaScript: http://www.codecademy.com/tracks/javascript;
+
+6. Pass training for JQuery: http://www.codecademy.com/tracks/jquery;
+
+7. Create test project with use of Thycidides – use 5 test cases for gmail;
+
+8. Pass training for XPath: quizful for example.
+
+12. Pass training for Web Fundamentals: http://www.codecademy.com/tracks/web
+
+13. Create log4j test project with using all options;
+
+14. Create/generate your own web-services (SOAP && RESP) that give calculator functionality. Implement 5 tests for each of services that test this functionality on apache cxf library.
+
+
+Soft skills:
+------------
+1. Detailed reporting
+2. In case of blockers or wrong estimates notify as soon I you know it
+2.   Establish positive professional relationships with teammate and project members;

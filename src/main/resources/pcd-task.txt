@@ -19,7 +19,7 @@
          state                   214
          strategy                226, 234, 526, 547, 558, 559, 648, 653, 743, 889
          mediator
-         builder                 Bloch???
+      +  builder                 Bloch???
          composite
       +  decorator               512
 
@@ -33,7 +33,7 @@
       chain of responsibility 743
       Command                 268, 429, 739, 805
       Data Transfer Object (Messenger idiom) · 442, 571, 617
-      Façade                  411
+      Facade                  411
       Flyweight               573, 935;
       Iterator                246, 287;
       Visitor                 775

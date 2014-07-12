@@ -15,3 +15,5 @@ PatternsDemo
       builder                 	      
       composite 
       decorator   
+      
+#Create log4j test project with using all options.

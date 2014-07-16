@@ -89,7 +89,7 @@ class Ear extends BodyPart {
     }
 
     public void hearSomething() {
-        System.out.println("Enter what you here:");
+        System.out.println("Enter what you hear:");
         sounds = new Scanner(System.in).next();
         changed();
     }

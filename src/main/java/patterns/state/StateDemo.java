@@ -24,6 +24,43 @@ class Product {
     }
 }
 
+abstract class OrderState {
+    protected Order order;
+
+    OrderState(Order order) {
+        this.order = order;
+    }
+
+    public void addProduct() {
+        unsupportedOperation("AddProduct");
+    }
+
+    public void register() {
+        unsupportedOperation("Register");
+    }
+
+    public void grand() {
+        unsupportedOperation("Grand");
+    }
+
+    public void ship() {
+        unsupportedOperation("Ship");
+    }
+
+    public void invoice() {
+        unsupportedOperation("Invoice");
+    }
+
+    public void cancel() {
+        unsupportedOperation("Cancel");
+    }
+
+    protected void unsupportedOperation(String operation) {
+        System.out.printf("Operation %s isn't supported for Order's state %s%n",
+                operation, this.getClass().getSimpleName());
+    }
+}
+
 class Order {
     private OrderState state;
     private List<Product> products = new ArrayList<>();
@@ -103,7 +140,6 @@ class Order {
 }
 
 class Registered extends OrderState {
-
     Registered(Order order) {
         super(order);
     }
@@ -196,43 +232,6 @@ class Cancel extends OrderState {
     }
 }
 
-abstract class OrderState {
-    protected Order order;
-
-    OrderState(Order order) {
-        this.order = order;
-    }
-
-    public void addProduct() {
-        unsupportedOperation("AddProduct");
-    }
-
-    public void register() {
-        unsupportedOperation("Register");
-    }
-
-    public void grand() {
-        unsupportedOperation("Grand");
-    }
-
-    public void ship() {
-        unsupportedOperation("Ship");
-    }
-
-    public void invoice() {
-        unsupportedOperation("Invoice");
-    }
-
-    public void cancel() {
-        unsupportedOperation("Cancel");
-    }
-
-    protected void unsupportedOperation(String operation) {
-        System.out.printf("Operation %s isn't supported for Order's state %s",
-                operation, this.getClass().getSimpleName());
-    }
-}
-
 public class StateDemo {
     public static void main(String[] args) {
         Product pepsi = new Product();
@@ -240,7 +239,6 @@ public class StateDemo {
         pepsi.setPrice(18D);
 
         Order order = new Order();
-//        new OrderState(order);
         order.currentState();
 
         order.addProduct(pepsi);
@@ -256,9 +254,6 @@ public class StateDemo {
         order.currentState();
 
         order.invoice();
-        order.currentState();
-
-        order.cancel();
         order.currentState();
 
         // add again

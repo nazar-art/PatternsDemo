@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>patterns.proxy</OriginalElement>
+  <nodes>
+    <node x="340.5" y="579.0">patterns.proxy.ProxyDemo</node>
+    <node x="95.69999999999999" y="300.0">patterns.proxy.RobotBombDefuserProxy</node>
+    <node x="0.0" y="99.5">patterns.proxy.BadConnectionException</node>
+    <node x="247.99999999999997" y="0.0">patterns.proxy.RobotBombDefuser</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="patterns.proxy.ProxyDemo" target="patterns.proxy.RobotBombDefuserProxy">
+      <point x="-43.25" y="-36.5" />
+      <point x="383.75" y="554.0" />
+      <point x="306.2" y="554.0" />
+      <point x="0.0" y="114.5" />
+    </edge>
+    <edge source="patterns.proxy.RobotBombDefuserProxy" target="patterns.proxy.RobotBombDefuser">
+      <point x="157.875" y="-114.5" />
+      <point x="464.075" y="275.0" />
+      <point x="449.875" y="275.0" />
+      <point x="40.375" y="125.0" />
+    </edge>
+    <edge source="patterns.proxy.RobotBombDefuserProxy" target="patterns.proxy.BadConnectionException">
+      <point x="-157.875" y="-114.5" />
+      <point x="148.325" y="275.0" />
+      <point x="114.0" y="275.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="patterns.proxy.ProxyDemo" target="patterns.proxy.RobotBombDefuser">
+      <point x="43.25" y="-36.5" />
+      <point x="470.25" y="554.0" />
+      <point x="527.2" y="554.0" />
+      <point x="527.2" y="275.0" />
+      <point x="530.625" y="275.0" />
+      <point x="121.125" y="125.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="82.5" y="128.0" />
+  <SelectedNodes>
+    <node>patterns.proxy.ProxyDemo</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>patterns.composite</OriginalElement>
+  <nodes>
+    <node x="379.08333333333337" y="402.0">patterns.composite.CompositeDemo</node>
+    <node x="210.0" y="156.0">patterns.composite.OrderDocumentComponent</node>
+    <node x="0.0" y="201.0">patterns.composite.HeaderDocumentComponent</node>
+    <node x="420.75" y="0.0">patterns.composite.IDocumentComponent</node>
+    <node x="735.0" y="156.0">patterns.composite.CustomerDocumentComponent</node>
+    <node x="438.0" y="123.0">patterns.composite.DocumentComponent</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="patterns.composite.CompositeDemo" target="patterns.composite.CustomerDocumentComponent">
+      <point x="57.375" y="-25.5" />
+      <point x="512.9583333333334" y="382.0" />
+      <point x="850.0" y="382.0" />
+      <point x="0.0" y="81.5" />
+    </edge>
+    <edge source="patterns.composite.DocumentComponent" target="patterns.composite.IDocumentComponent">
+      <point x="69.25" y="-114.5" />
+      <point x="645.75" y="103.0" />
+      <point x="541.85" y="103.0" />
+      <point x="34.599999999999966" y="36.5" />
+    </edge>
+    <edge source="patterns.composite.HeaderDocumentComponent" target="patterns.composite.IDocumentComponent">
+      <point x="0.0" y="-36.5" />
+      <point x="95.0" y="93.0" />
+      <point x="438.05000000000007" y="93.0" />
+      <point x="-69.19999999999999" y="36.5" />
+    </edge>
+    <edge source="patterns.composite.CustomerDocumentComponent" target="patterns.composite.IDocumentComponent">
+      <point x="0.0" y="-81.5" />
+      <point x="850.0" y="93.0" />
+      <point x="576.45" y="93.0" />
+      <point x="69.20000000000005" y="36.5" />
+    </edge>
+    <edge source="patterns.composite.CompositeDemo" target="patterns.composite.DocumentComponent">
+      <point x="19.125" y="-25.5" />
+      <point x="474.70833333333337" y="372.0" />
+      <point x="576.5" y="372.0" />
+      <point x="0.0" y="114.5" />
+    </edge>
+    <edge source="patterns.composite.CompositeDemo" target="patterns.composite.HeaderDocumentComponent">
+      <point x="-57.375" y="-25.5" />
+      <point x="398.20833333333337" y="382.0" />
+      <point x="95.0" y="382.0" />
+      <point x="0.0" y="36.5" />
+    </edge>
+    <edge source="patterns.composite.OrderDocumentComponent" target="patterns.composite.IDocumentComponent">
+      <point x="0.0" y="-81.5" />
+      <point x="314.0" y="103.0" />
+      <point x="472.65" y="103.0" />
+      <point x="-34.60000000000002" y="36.5" />
+    </edge>
+    <edge source="patterns.composite.CompositeDemo" target="patterns.composite.OrderDocumentComponent">
+      <point x="-19.125" y="-25.5" />
+      <point x="436.45833333333337" y="372.0" />
+      <point x="314.0" y="372.0" />
+      <point x="0.0" y="81.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="394.0" y="91.0" />
+  <SelectedNodes>
+    <node>patterns.composite.CompositeDemo</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

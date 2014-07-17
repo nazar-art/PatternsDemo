@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>patterns.state</OriginalElement>
+  <nodes>
+    <node x="108.46309523809529" y="692.0">patterns.state.Registered</node>
+    <node x="258.24999999999994" y="411.5">patterns.state.Cancel</node>
+    <node x="447.0833333333333" y="1593.0">patterns.state.StateDemo</node>
+    <node x="221.90714285714282" y="882.0">patterns.state.NewOrder</node>
+    <node x="117.28214285714282" y="1072.0">patterns.state.Order</node>
+    <node x="116.74999999999994" y="524.0">patterns.state.Granted</node>
+    <node x="21.5" y="400.0">patterns.state.Shipped</node>
+    <node x="66.23333333333332" y="0.0">patterns.state.OrderState</node>
+    <node x="72.25" y="299.0">patterns.state.Invoice</node>
+    <node x="482.03214285714284" y="860.0">patterns.state.Product</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="patterns.state.Shipped" target="patterns.state.Invoice">
+      <point x="39.25" y="-37.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="patterns.state.NewOrder" target="patterns.state.Cancel">
+      <point x="0.0" y="-59.0" />
+      <point x="325.90714285714284" y="835.0" />
+      <point x="348.6226190476191" y="835.0" />
+      <point x="348.6226190476191" y="499.0" />
+      <point x="366.5833333333333" y="499.0" />
+      <point x="43.33333333333337" y="25.5" />
+    </edge>
+    <edge source="patterns.state.Granted" target="patterns.state.Shipped">
+      <point x="-65.33333333333329" y="-59.0" />
+      <point x="149.41666666666666" y="499.0" />
+      <point x="100.0" y="499.0" />
+      <point x="0.0" y="37.0" />
+    </edge>
+    <edge source="patterns.state.Granted" target="patterns.state.Cancel">
+      <point x="65.33333333333334" y="-59.0" />
+      <point x="-43.33333333333334" y="25.5" />
+    </edge>
+    <edge source="patterns.state.StateDemo" target="patterns.state.Product">
+      <point x="38.25" y="-25.5" />
+      <point x="561.8333333333333" y="1568.0" />
+      <point x="644.7821428571428" y="1568.0" />
+      <point x="54.24999999999994" y="81.0" />
+    </edge>
+    <edge source="patterns.state.Registered" target="patterns.state.OrderState">
+      <point x="-69.66666666666669" y="-59.0" />
+      <point x="143.2964285714286" y="667.0" />
+      <point x="11.0" y="667.0" />
+      <point x="11.0" y="259.0" />
+      <point x="117.60833333333332" y="259.0" />
+      <point x="-85.625" y="114.5" />
+    </edge>
+    <edge source="patterns.state.Registered" target="patterns.state.Granted">
+      <point x="0.0" y="-59.0" />
+      <point x="212.9630952380953" y="667.0" />
+      <point x="214.74999999999994" y="667.0" />
+      <point x="0.0" y="59.0" />
+    </edge>
+    <edge source="patterns.state.Shipped" target="patterns.state.OrderState">
+      <point x="-39.25" y="-37.0" />
+      <point x="61.75" y="269.0" />
+      <point x="151.85833333333332" y="269.0" />
+      <point x="-51.375" y="114.5" />
+    </edge>
+    <edge source="patterns.state.Registered" target="patterns.state.Cancel">
+      <point x="69.66666666666669" y="-59.0" />
+      <point x="282.62976190476195" y="667.0" />
+      <point x="323.24999999999994" y="667.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="patterns.state.Cancel" target="patterns.state.OrderState">
+      <point x="0.0" y="-25.5" />
+      <point x="323.24999999999994" y="279.0" />
+      <point x="254.60833333333332" y="279.0" />
+      <point x="51.375" y="114.5" />
+    </edge>
+    <edge source="patterns.state.OrderState" target="patterns.state.Order">
+      <point x="-119.875" y="114.5" />
+      <point x="83.35833333333332" y="249.0" />
+      <point x="0.0" y="249.0" />
+      <point x="0.0" y="1047.0" />
+      <point x="181.90714285714282" y="1047.0" />
+      <point x="-193.875" y="-235.5" />
+    </edge>
+    <edge source="patterns.state.Order" target="patterns.state.OrderState">
+      <point x="64.625" y="-235.5" />
+      <point x="440.40714285714284" y="259.0" />
+      <point x="323.10833333333335" y="259.0" />
+      <point x="119.875" y="114.5" />
+    </edge>
+    <edge source="patterns.state.Order" target="patterns.state.Product">
+      <point x="193.875" y="-235.5" />
+      <point x="569.6571428571428" y="1047.0" />
+      <point x="536.2821428571428" y="1047.0" />
+      <point x="-54.25" y="81.0" />
+    </edge>
+    <edge source="patterns.state.Granted" target="patterns.state.OrderState">
+      <point x="2.8421709430404007E-14" y="-59.0" />
+      <point x="214.75" y="279.0" />
+      <point x="220.35833333333332" y="279.0" />
+      <point x="17.125" y="114.5" />
+    </edge>
+    <edge source="patterns.state.Invoice" target="patterns.state.OrderState">
+      <point x="0.0" y="-25.5" />
+      <point x="138.25" y="279.0" />
+      <point x="186.10833333333332" y="279.0" />
+      <point x="-17.125" y="114.5" />
+    </edge>
+    <edge source="patterns.state.StateDemo" target="patterns.state.Order">
+      <point x="-38.25" y="-25.5" />
+      <point x="485.3333333333333" y="1568.0" />
+      <point x="375.78214285714284" y="1568.0" />
+      <point x="0.0" y="235.5" />
+    </edge>
+    <edge source="patterns.state.NewOrder" target="patterns.state.OrderState">
+      <point x="69.33333333333331" y="-59.0" />
+      <point x="395.2404761904761" y="835.0" />
+      <point x="413.1226190476191" y="835.0" />
+      <point x="413.1226190476191" y="269.0" />
+      <point x="288.85833333333335" y="269.0" />
+      <point x="85.625" y="114.5" />
+    </edge>
+    <edge source="patterns.state.Order" target="patterns.state.NewOrder">
+      <point x="-64.625" y="-235.5" />
+      <point x="311.15714285714284" y="1047.0" />
+      <point x="325.90714285714284" y="1047.0" />
+      <point x="0.0" y="59.0" />
+    </edge>
+    <edge source="patterns.state.NewOrder" target="patterns.state.Registered">
+      <point x="-69.33333333333331" y="-59.0" />
+      <point x="256.5738095238095" y="835.0" />
+      <point x="212.9630952380953" y="835.0" />
+      <point x="0.0" y="59.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="280.0" y="133.0" />
+  <SelectedNodes>
+    <node>patterns.state.OrderState</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

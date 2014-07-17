@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>patterns.builder</OriginalElement>
+  <nodes>
+    <node x="0.0" y="732.0">patterns.builder.GamingLaptopBuilder</node>
+    <node x="417.0" y="732.0">patterns.builder.TripLaptopBuilder</node>
+    <node x="834.0" y="787.0">patterns.builder.BuyLaptop</node>
+    <node x="462.0" y="432.0">patterns.builder.LaptopBuilder</node>
+    <node x="372.5" y="0.0">patterns.builder.Laptop</node>
+    <node x="543.8333333333333" y="1032.0">patterns.builder.BuilderDemo</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="patterns.builder.GamingLaptopBuilder" target="patterns.builder.LaptopBuilder">
+      <point x="0.0" y="-125.0" />
+      <point x="198.5" y="707.0" />
+      <point x="513.1666666666666" y="707.0" />
+      <point x="-102.33333333333337" y="125.0" />
+    </edge>
+    <edge source="patterns.builder.BuilderDemo" target="patterns.builder.BuyLaptop">
+      <point x="51.0" y="-25.5" />
+      <point x="671.3333333333333" y="1007.0" />
+      <point x="974.5" y="1007.0" />
+      <point x="0.0" y="70.0" />
+    </edge>
+    <edge source="patterns.builder.BuyLaptop" target="patterns.builder.LaptopBuilder">
+      <point x="0.0" y="-70.0" />
+      <point x="974.5" y="707.0" />
+      <point x="717.8333333333333" y="707.0" />
+      <point x="102.33333333333326" y="125.0" />
+    </edge>
+    <edge source="patterns.builder.BuilderDemo" target="patterns.builder.TripLaptopBuilder">
+      <point x="0.0" y="-25.5" />
+      <point x="620.3333333333333" y="1007.0" />
+      <point x="615.5" y="1007.0" />
+      <point x="0.0" y="125.0" />
+    </edge>
+    <edge source="patterns.builder.LaptopBuilder" target="patterns.builder.Laptop">
+      <point x="-76.75" y="-125.0" />
+      <point x="538.75" y="407.0" />
+      <point x="494.0" y="407.0" />
+      <point x="-121.5" y="191.0" />
+    </edge>
+    <edge source="patterns.builder.TripLaptopBuilder" target="patterns.builder.LaptopBuilder">
+      <point x="0.0" y="-125.0" />
+      <point x="0.0" y="125.0" />
+    </edge>
+    <edge source="patterns.builder.BuilderDemo" target="patterns.builder.GamingLaptopBuilder">
+      <point x="-51.0" y="-25.5" />
+      <point x="569.3333333333333" y="1007.0" />
+      <point x="198.5" y="1007.0" />
+      <point x="0.0" y="125.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="160.5" y="885.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

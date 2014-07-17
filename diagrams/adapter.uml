@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>patterns.adapter</OriginalElement>
+  <nodes>
+    <node x="211.00000000000003" y="101.0">patterns.adapter.Adapter</node>
+    <node x="344.375" y="0.0">patterns.adapter.OldElectricitySystem</node>
+    <node x="96.10416666666669" y="0.0">patterns.adapter.INewElectricitySystem</node>
+    <node x="0.0" y="344.0">patterns.adapter.ElectricityCustomer</node>
+    <node x="257.5" y="248.0">patterns.adapter.AdapterDemo</node>
+    <node x="0.0" y="124.0">patterns.adapter.NewElectricitySystem</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="patterns.adapter.AdapterDemo" target="patterns.adapter.OldElectricitySystem">
+      <point x="51.00000000000001" y="-25.5" />
+      <point x="385.0" y="223.0" />
+      <point x="474.375" y="223.0" />
+      <point x="474.375" y="76.0" />
+      <point x="485.375" y="76.0" />
+      <point x="47.0" y="25.5" />
+    </edge>
+    <edge source="patterns.adapter.Adapter" target="patterns.adapter.INewElectricitySystem">
+      <point x="-61.5" y="-48.5" />
+      <point x="272.5" y="76.0" />
+      <point x="239.35416666666669" y="76.0" />
+      <point x="47.75" y="25.5" />
+    </edge>
+    <edge source="patterns.adapter.AdapterDemo" target="patterns.adapter.NewElectricitySystem">
+      <point x="-51.0" y="-25.5" />
+      <point x="283.0" y="223.0" />
+      <point x="95.5" y="223.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="patterns.adapter.Adapter" target="patterns.adapter.OldElectricitySystem">
+      <point x="61.5" y="-48.5" />
+      <point x="395.5" y="76.0" />
+      <point x="391.375" y="76.0" />
+      <point x="-47.0" y="25.5" />
+    </edge>
+    <edge source="patterns.adapter.AdapterDemo" target="patterns.adapter.Adapter">
+      <point x="0.0" y="-25.5" />
+      <point x="0.0" y="48.5" />
+    </edge>
+    <edge source="patterns.adapter.NewElectricitySystem" target="patterns.adapter.INewElectricitySystem">
+      <point x="0.0" y="-25.5" />
+      <point x="95.5" y="76.0" />
+      <point x="143.85416666666669" y="76.0" />
+      <point x="-47.75" y="25.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="143.0" y="128.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

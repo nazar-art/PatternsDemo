@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>patterns.templateMethod</OriginalElement>
+  <nodes>
+    <node x="0.0" y="424.0">patterns.templateMethod.ImportantMessagesSearcher</node>
+    <node x="178.75" y="167.0">patterns.templateMethod.MessageSearcher</node>
+    <node x="222.25" y="548.0">patterns.templateMethod.TemplateMethodDemo</node>
+    <node x="217.25" y="0.0">patterns.templateMethod.ImportanceLevel</node>
+    <node x="314.0" y="424.0">patterns.templateMethod.UselessMessagesSearcher</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="patterns.templateMethod.TemplateMethodDemo" target="patterns.templateMethod.ImportantMessagesSearcher">
+      <point x="-39.0" y="-25.5" />
+      <point x="261.25" y="523.0" />
+      <point x="147.0" y="523.0" />
+      <point x="0.0" y="37.0" />
+    </edge>
+    <edge source="patterns.templateMethod.TemplateMethodDemo" target="patterns.templateMethod.UselessMessagesSearcher">
+      <point x="39.0" y="-25.5" />
+      <point x="339.25" y="523.0" />
+      <point x="453.5" y="523.0" />
+      <point x="0.0" y="37.0" />
+    </edge>
+    <edge source="patterns.templateMethod.ImportantMessagesSearcher" target="patterns.templateMethod.MessageSearcher">
+      <point x="0.0" y="-37.0" />
+      <point x="147.0" y="399.0" />
+      <point x="239.5" y="399.0" />
+      <point x="-60.75" y="103.5" />
+    </edge>
+    <edge source="patterns.templateMethod.UselessMessagesSearcher" target="patterns.templateMethod.MessageSearcher">
+      <point x="0.0" y="-37.0" />
+      <point x="453.5" y="399.0" />
+      <point x="361.0" y="399.0" />
+      <point x="60.75" y="103.5" />
+    </edge>
+    <edge source="patterns.templateMethod.MessageSearcher" target="patterns.templateMethod.ImportanceLevel">
+      <point x="0.0" y="-103.5" />
+      <point x="0.0" y="58.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="183.5" y="128.0" />
+  <SelectedNodes>
+    <node>patterns.templateMethod.UselessMessagesSearcher</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

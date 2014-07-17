@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>patterns.bridge</OriginalElement>
+  <nodes>
+    <node x="248.0" y="178.5">patterns.bridge.ConcreteWallCreator</node>
+    <node x="599.25" y="0.0">patterns.bridge.IBuildingCompany</node>
+    <node x="496.0" y="145.0">patterns.bridge.BuildingCompany</node>
+    <node x="0.0" y="178.5">patterns.bridge.BrickWallCreator</node>
+    <node x="285.5" y="357.0">patterns.bridge.BridgeDemo</node>
+    <node x="215.04166666666669" y="0.0">patterns.bridge.IWallCreator</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="patterns.bridge.BridgeDemo" target="patterns.bridge.ConcreteWallCreator">
+      <point x="0.0" y="-25.5" />
+      <point x="0.0" y="47.5" />
+    </edge>
+    <edge source="patterns.bridge.BridgeDemo" target="patterns.bridge.BrickWallCreator">
+      <point x="-51.0" y="-25.5" />
+      <point x="311.0" y="332.0" />
+      <point x="114.0" y="332.0" />
+      <point x="0.0" y="47.5" />
+    </edge>
+    <edge source="patterns.bridge.ConcreteWallCreator" target="patterns.bridge.IWallCreator">
+      <point x="0.0" y="-47.5" />
+      <point x="362.0" y="120.0" />
+      <point x="329.0416666666667" y="120.0" />
+      <point x="0.0" y="47.5" />
+    </edge>
+    <edge source="patterns.bridge.BrickWallCreator" target="patterns.bridge.IWallCreator">
+      <point x="0.0" y="-47.5" />
+      <point x="114.0" y="120.0" />
+      <point x="253.04166666666669" y="120.0" />
+      <point x="-76.0" y="47.5" />
+    </edge>
+    <edge source="patterns.bridge.BuildingCompany" target="patterns.bridge.IBuildingCompany">
+      <point x="70.25" y="-81.0" />
+      <point x="0.0" y="47.5" />
+    </edge>
+    <edge source="patterns.bridge.BridgeDemo" target="patterns.bridge.BuildingCompany">
+      <point x="51.0" y="-25.5" />
+      <point x="413.0" y="332.0" />
+      <point x="636.5" y="332.0" />
+      <point x="0.0" y="81.0" />
+    </edge>
+    <edge source="patterns.bridge.BuildingCompany" target="patterns.bridge.IWallCreator">
+      <point x="-70.25" y="-81.0" />
+      <point x="566.25" y="120.0" />
+      <point x="405.04166666666663" y="120.0" />
+      <point x="75.99999999999997" y="47.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="141.0" y="130.5" />
+  <SelectedNodes>
+    <node>patterns.bridge.IWallCreator</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

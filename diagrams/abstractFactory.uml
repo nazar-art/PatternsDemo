@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>patterns.abstractFactory</OriginalElement>
+  <nodes>
+    <node x="148.9431818181818" y="403.0">patterns.abstractFactory.TeddyToyFactory</node>
+    <node x="328.1931818181818" y="0.0">patterns.abstractFactory.AnimalToy</node>
+    <node x="0.0" y="291.0">patterns.abstractFactory.TeddyCat</node>
+    <node x="165.99999999999997" y="291.0">patterns.abstractFactory.TeddyBear</node>
+    <node x="270.5681818181818" y="169.0">patterns.abstractFactory.Cat</node>
+    <node x="337.0" y="280.0">patterns.abstractFactory.IToyFactory</node>
+    <node x="504.0" y="291.0">patterns.abstractFactory.WoodenCat</node>
+    <node x="442.56818181818176" y="169.0">patterns.abstractFactory.Bear</node>
+    <node x="530.9431818181818" y="403.0">patterns.abstractFactory.WoodenToyFactory</node>
+    <node x="682.0" y="291.0">patterns.abstractFactory.WoodenBear</node>
+    <node x="297.25" y="526.0">patterns.abstractFactory.AbstractFactoryDemo</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="patterns.abstractFactory.WoodenToyFactory" target="patterns.abstractFactory.WoodenBear">
+      <point x="49.0" y="-36.5" />
+      <point x="653.4431818181818" y="378.0" />
+      <point x="763.5" y="378.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="patterns.abstractFactory.TeddyToyFactory" target="patterns.abstractFactory.TeddyBear">
+      <point x="0.0" y="-36.5" />
+      <point x="222.4431818181818" y="378.0" />
+      <point x="241.49999999999997" y="378.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="patterns.abstractFactory.WoodenToyFactory" target="patterns.abstractFactory.IToyFactory">
+      <point x="-49.0" y="-36.5" />
+      <point x="555.4431818181818" y="378.0" />
+      <point x="447.25" y="378.0" />
+      <point x="36.75" y="36.5" />
+    </edge>
+    <edge source="patterns.abstractFactory.AbstractFactoryDemo" target="patterns.abstractFactory.TeddyToyFactory">
+      <point x="-57.5" y="-47.5" />
+      <point x="354.75" y="501.0" />
+      <point x="222.4431818181818" y="501.0" />
+      <point x="0.0" y="36.5" />
+    </edge>
+    <edge source="patterns.abstractFactory.TeddyToyFactory" target="patterns.abstractFactory.IToyFactory">
+      <point x="49.0" y="-36.5" />
+      <point x="271.4431818181818" y="378.0" />
+      <point x="373.75" y="378.0" />
+      <point x="-36.75" y="36.5" />
+    </edge>
+    <edge source="patterns.abstractFactory.TeddyBear" target="patterns.abstractFactory.Bear">
+      <point x="-2.8421709430404007E-14" y="-25.5" />
+      <point x="241.49999999999994" y="260.0" />
+      <point x="472.06818181818176" y="260.0" />
+      <point x="-29.5" y="25.5" />
+    </edge>
+    <edge source="patterns.abstractFactory.TeddyCat" target="patterns.abstractFactory.Cat">
+      <point x="0.0" y="-25.5" />
+      <point x="73.0" y="250.0" />
+      <point x="298.8181818181818" y="250.0" />
+      <point x="-28.25" y="25.5" />
+    </edge>
+    <edge source="patterns.abstractFactory.Bear" target="patterns.abstractFactory.AnimalToy">
+      <point x="0.0" y="-25.5" />
+      <point x="501.56818181818176" y="144.0" />
+      <point x="460.9431818181818" y="144.0" />
+      <point x="44.25" y="59.5" />
+    </edge>
+    <edge source="patterns.abstractFactory.WoodenToyFactory" target="patterns.abstractFactory.WoodenCat">
+      <point x="0.0" y="-36.5" />
+      <point x="604.4431818181818" y="378.0" />
+      <point x="583.0" y="378.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="patterns.abstractFactory.TeddyToyFactory" target="patterns.abstractFactory.TeddyCat">
+      <point x="-49.0" y="-36.5" />
+      <point x="173.4431818181818" y="378.0" />
+      <point x="73.0" y="378.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="patterns.abstractFactory.WoodenCat" target="patterns.abstractFactory.Cat">
+      <point x="0.0" y="-25.5" />
+      <point x="583.0" y="250.0" />
+      <point x="355.3181818181818" y="250.0" />
+      <point x="28.25" y="25.5" />
+    </edge>
+    <edge source="patterns.abstractFactory.WoodenBear" target="patterns.abstractFactory.Bear">
+      <point x="0.0" y="-25.5" />
+      <point x="763.5" y="240.0" />
+      <point x="531.0681818181818" y="240.0" />
+      <point x="29.5" y="25.5" />
+    </edge>
+    <edge source="patterns.abstractFactory.AbstractFactoryDemo" target="patterns.abstractFactory.WoodenToyFactory">
+      <point x="57.5" y="-47.5" />
+      <point x="469.75" y="501.0" />
+      <point x="604.4431818181818" y="501.0" />
+      <point x="0.0" y="36.5" />
+    </edge>
+    <edge source="patterns.abstractFactory.Cat" target="patterns.abstractFactory.AnimalToy">
+      <point x="0.0" y="-25.5" />
+      <point x="327.0681818181818" y="144.0" />
+      <point x="372.4431818181818" y="144.0" />
+      <point x="-44.25" y="59.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="213.0" y="207.0" />
+  <SelectedNodes>
+    <node>patterns.abstractFactory.WoodenToyFactory</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>patterns.mediator</OriginalElement>
+  <nodes>
+    <node x="507.7499999999999" y="811.0">patterns.mediator.MediatorDemo</node>
+    <node x="430.24999999999994" y="444.0">patterns.mediator.Brain</node>
+    <node x="648.0" y="201.5">patterns.mediator.Leg</node>
+    <node x="574.4166666666667" y="0.0">patterns.mediator.BodyPart</node>
+    <node x="0.0" y="201.0">patterns.mediator.Ear</node>
+    <node x="493.0" y="223.5">patterns.mediator.Face</node>
+    <node x="205.0" y="157.0">patterns.mediator.Hand</node>
+    <node x="838.0" y="201.0">patterns.mediator.Eye</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="patterns.mediator.Brain" target="patterns.mediator.Leg">
+      <point x="59.63636363636368" y="-158.5" />
+      <point x="653.8863636363636" y="394.0" />
+      <point x="775.5" y="394.0" />
+      <point x="42.5" y="59.0" />
+    </edge>
+    <edge source="patterns.mediator.Ear" target="patterns.mediator.BodyPart">
+      <point x="0.0" y="-59.5" />
+      <point x="92.5" y="117.0" />
+      <point x="586.9166666666667" y="117.0" />
+      <point x="-62.5" y="48.5" />
+    </edge>
+    <edge source="patterns.mediator.Brain" target="patterns.mediator.Ear">
+      <point x="-149.09090909090907" y="-158.5" />
+      <point x="445.1590909090909" y="424.0" />
+      <point x="46.25" y="424.0" />
+      <point x="-46.25" y="59.5" />
+    </edge>
+    <edge source="patterns.mediator.Eye" target="patterns.mediator.BodyPart">
+      <point x="0.0" y="-59.5" />
+      <point x="931.5" y="127.0" />
+      <point x="686.9166666666667" y="127.0" />
+      <point x="37.5" y="48.5" />
+    </edge>
+    <edge source="patterns.mediator.Brain" target="patterns.mediator.Eye">
+      <point x="119.27272727272731" y="-158.5" />
+      <point x="713.5227272727273" y="414.0" />
+      <point x="978.25" y="414.0" />
+      <point x="46.75" y="59.5" />
+    </edge>
+    <edge source="patterns.mediator.Leg" target="patterns.mediator.BodyPart">
+      <point x="0.0" y="-59.0" />
+      <point x="733.0" y="137.0" />
+      <point x="661.9166666666667" y="137.0" />
+      <point x="12.5" y="48.5" />
+    </edge>
+    <edge source="patterns.mediator.Brain" target="patterns.mediator.Hand">
+      <point x="-89.45454545454544" y="-158.5" />
+      <point x="504.7954545454545" y="404.0" />
+      <point x="272.0" y="404.0" />
+      <point x="-67.0" y="103.5" />
+    </edge>
+    <edge source="patterns.mediator.Brain" target="patterns.mediator.Face">
+      <point x="5.6843418860808015E-14" y="-158.5" />
+      <point x="33.75" y="37.0" />
+    </edge>
+    <edge source="patterns.mediator.Hand" target="patterns.mediator.BodyPart">
+      <point x="0.0" y="-103.5" />
+      <point x="339.0" y="127.0" />
+      <point x="611.9166666666667" y="127.0" />
+      <point x="-37.5" y="48.5" />
+    </edge>
+    <edge source="patterns.mediator.MediatorDemo" target="patterns.mediator.Brain">
+      <point x="5.6843418860808015E-14" y="-36.5" />
+      <point x="0.0" y="158.5" />
+    </edge>
+    <edge source="patterns.mediator.Face" target="patterns.mediator.BodyPart">
+      <point x="0.0" y="-37.0" />
+      <point x="560.5" y="137.0" />
+      <point x="636.9166666666667" y="137.0" />
+      <point x="-12.5" y="48.5" />
+    </edge>
+    <edge source="patterns.mediator.BodyPart" target="patterns.mediator.Brain">
+      <point x="62.5" y="48.5" />
+      <point x="711.9166666666667" y="117.0" />
+      <point x="1035.5" y="117.0" />
+      <point x="1035.5" y="424.0" />
+      <point x="743.3409090909091" y="424.0" />
+      <point x="149.09090909090918" y="-158.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="173.0" y="128.0" />
+  <SelectedNodes>
+    <node>patterns.mediator.MediatorDemo</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

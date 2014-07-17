@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>patterns.factoryMethod</OriginalElement>
+  <nodes>
+    <node x="0.0" y="145.0">patterns.factoryMethod.AdvancedLogger</node>
+    <node x="0.0" y="386.0">patterns.factoryMethod.LoggingProviders</node>
+    <node x="191.0" y="386.0">patterns.factoryMethod.FactoryMethodDemo</node>
+    <node x="241.0" y="145.0">patterns.factoryMethod.CommonLogger</node>
+    <node x="120.5" y="0.0">patterns.factoryMethod.ILogger</node>
+    <node x="83.5" y="290.0">patterns.factoryMethod.LoggerProviderFactory</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="patterns.factoryMethod.AdvancedLogger" target="patterns.factoryMethod.ILogger">
+      <point x="0.0" y="-47.5" />
+      <point x="110.5" y="120.0" />
+      <point x="175.75" y="120.0" />
+      <point x="-55.25" y="47.5" />
+    </edge>
+    <edge source="patterns.factoryMethod.CommonLogger" target="patterns.factoryMethod.ILogger">
+      <point x="0.0" y="-47.5" />
+      <point x="351.5" y="120.0" />
+      <point x="286.25" y="120.0" />
+      <point x="55.25" y="47.5" />
+    </edge>
+    <edge source="patterns.factoryMethod.LoggerProviderFactory" target="patterns.factoryMethod.AdvancedLogger">
+      <point x="-73.75" y="-25.5" />
+      <point x="157.25" y="265.0" />
+      <point x="110.5" y="265.0" />
+      <point x="0.0" y="47.5" />
+    </edge>
+    <edge source="patterns.factoryMethod.LoggerProviderFactory" target="patterns.factoryMethod.CommonLogger">
+      <point x="73.75" y="-25.5" />
+      <point x="304.75" y="265.0" />
+      <point x="351.5" y="265.0" />
+      <point x="0.0" y="47.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="157.5" y="128.0" />
+  <SelectedNodes>
+    <node>patterns.factoryMethod.LoggingProviders</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

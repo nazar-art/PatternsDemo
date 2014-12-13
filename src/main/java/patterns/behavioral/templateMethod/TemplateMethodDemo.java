@@ -12,6 +12,7 @@ abstract class MessageSearcher {
         this.personName = personName;
         this.importanceLevel = importanceLevel;
     }
+
     // general operations
     protected void apllyDateCriteria() {
         System.out.println("Standard date criteria has been applied.");

@@ -2,7 +2,7 @@ package patterns.structural.proxy;
 
 import java.util.Random;
 
-class RobotBombDefuser {
+class RobotBombDefuse {
     private Random random = new Random();
     private static final int ROBOT_WAVELENGTH = 42;
     private boolean isConnected = false;
@@ -39,14 +39,14 @@ class RobotBombDefuser {
     }
 }
 
-class RobotBombDefuserProxy extends RobotBombDefuser {
-    private RobotBombDefuser robotBombDefuser;
-    private int communicationWavelengt;
+class RobotBombDefuseProxy extends RobotBombDefuse {
+    private RobotBombDefuse robotBombDefuse;
+    private int communicationWavelength;
     private static final int CONNECTION_ATTEMPTS = 3;
 
-    RobotBombDefuserProxy(int communication) {
-        robotBombDefuser = new RobotBombDefuser();
-        this.communicationWavelengt = communication;
+    RobotBombDefuseProxy(int communication) {
+        robotBombDefuse = new RobotBombDefuse();
+        this.communicationWavelength = communication;
     }
 
     @Override
@@ -74,20 +74,20 @@ class RobotBombDefuserProxy extends RobotBombDefuser {
     }
 
     private void ensureRobotConnection() {
-        if (robotBombDefuser == null) {
-            robotBombDefuser = new RobotBombDefuser();
-            robotBombDefuser.connectionWireless(communicationWavelengt);
+        if (robotBombDefuse == null) {
+            robotBombDefuse = new RobotBombDefuse();
+            robotBombDefuse.connectionWireless(communicationWavelength);
         }
 
         for (int i = 0; i < CONNECTION_ATTEMPTS; i++) {
-            if (!robotBombDefuser.isConnected()) {
-                robotBombDefuser.connectionWireless(communicationWavelengt);
+            if (!robotBombDefuse.isConnected()) {
+                robotBombDefuse.connectionWireless(communicationWavelength);
             } else {
                 break;
             }
         }
-        if (!robotBombDefuser.isConnected()) {
-            throw new BadConnectionException("No connection with defuser robot, after few attempts");
+        if (!robotBombDefuse.isConnected()) {
+            throw new BadConnectionException("No connection with defuse robot, after few attempts");
         }
     }
 }
@@ -102,7 +102,7 @@ public class ProxyDemo {
     public static void main(String[] args) {
         int num = 0;
         try {
-            RobotBombDefuserProxy proxy = new RobotBombDefuserProxy(42);
+            RobotBombDefuseProxy proxy = new RobotBombDefuseProxy(42);
             proxy.walkForward(100);
             num++;
             proxy.turnRight();
@@ -118,7 +118,7 @@ public class ProxyDemo {
 
     private static void planB(int progressNumber) {
         System.out.println("Human control under robot started:");
-        RobotBombDefuser humanControlRobot = new RobotBombDefuser();
+        RobotBombDefuse humanControlRobot = new RobotBombDefuse();
         switch (progressNumber) {
             case 0:
                 humanControlRobot.walkForward(100);
@@ -133,7 +133,7 @@ public class ProxyDemo {
                 humanControlRobot.defuseBomb();
                 break;
             default:
-                System.out.println("Wrong number of operation - " + progressNumber + " stop bomb defuse!!");
+                System.out.printf("Wrong number of operation - %d stop bomb defuse!!%n", progressNumber);
                 System.exit(1);
         }
     }

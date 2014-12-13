@@ -1,5 +1,7 @@
 package patterns.structural.adapter;
 
+import org.apache.log4j.Logger;
+
 class OldElectricitySystem {
     public String matchThinSocket() {
         return "220V from thin socket";
@@ -11,7 +13,6 @@ interface INewElectricitySystem {
 }
 
 class NewElectricitySystem implements INewElectricitySystem {
-
     @Override
     public String matchWideSocket() {
         return "220V from wide socket";
@@ -19,25 +20,25 @@ class NewElectricitySystem implements INewElectricitySystem {
 }
 
 class Adapter implements INewElectricitySystem {
+    private static Logger LOG = Logger.getLogger(Adapter.class);
+    private OldElectricitySystem oldElectricitySystem;
 
-    private OldElectricitySystem adaptee;
-
-    Adapter(OldElectricitySystem adaptee) {
-//        System.out.println("adapter created");
-        this.adaptee = adaptee;
+    Adapter(OldElectricitySystem oldElectricitySystem) {
+        this.oldElectricitySystem = oldElectricitySystem;
     }
 
     @Override
     public String matchWideSocket() {
-        System.out.print("adapter matches for wide socket ");
-        return adaptee.matchThinSocket();
+        LOG.info("adapter matches for wide socket");
+        return oldElectricitySystem.matchThinSocket();
     }
 }
 
 class ElectricityCustomer {
+    private static Logger LOG = Logger.getLogger(ElectricityCustomer.class);
     // this laptop only for new system for wide sockets
     public static void chargeLaptop(INewElectricitySystem electricitySystem) {
-        System.out.println("laptop is charged from " + electricitySystem.matchWideSocket());
+        LOG.info("laptop is charged from " + electricitySystem.matchWideSocket());
     }
 }
 

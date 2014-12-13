@@ -72,7 +72,7 @@ class CustomerDocumentComponent implements IDocumentComponent {
                 customerData = "Someone else";
                 break;
         }
-        return String.format("<customer>%s</customer>\n", customerData);
+        return String.format("  <customer>%s</customer>\n", customerData);
     }
 
     @Override
@@ -90,7 +90,6 @@ class CustomerDocumentComponent implements IDocumentComponent {
 }
 
 class OrderDocumentComponent implements IDocumentComponent {
-
     private int orderId;
 
     OrderDocumentComponent(int orderId) {
@@ -108,7 +107,7 @@ class OrderDocumentComponent implements IDocumentComponent {
                 orderData = "Phone;Kable;Headset";
                 break;
         }
-        return String.format("<order>%s</order>\n", orderData);
+        return String.format("  <order>%s</order>\n", orderData);
     }
 
     @Override
@@ -129,8 +128,8 @@ class HeaderDocumentComponent implements IDocumentComponent {
 
     @Override
     public String gatherData() {
-        return String.format("<header>\n<messageTime>%s</messageTime>\n</header>\n", new SimpleDateFormat("hh:mm:ss")
-                .format(new Date()));
+        return String.format("  <header>\n      <messageTime>%s</messageTime>\n  </header>\n",
+                new SimpleDateFormat("hh:mm:ss").format(new Date()));
     }
 
     @Override

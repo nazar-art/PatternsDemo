@@ -42,13 +42,13 @@ class BuildingCompany implements IBuildingCompany {
     public IWallCreator getWallCreator() {
         return wallCreator;
     }
+
     public void setWallCreator(IWallCreator wallCreator) {
         this.wallCreator = wallCreator;
     }
 }
 
-class ConcreteWallCreator implements IWallCreator {
-
+class ConcreteSlabWallCreator implements IWallCreator {
     @Override
     public void buildWallWithDoor() {
         System.out.println("Concrete wall with door");
@@ -66,7 +66,6 @@ class ConcreteWallCreator implements IWallCreator {
 }
 
 class BrickWallCreator implements IWallCreator {
-
     @Override
     public void buildWallWithDoor() {
         System.out.println("Brick wall with door");
@@ -87,11 +86,11 @@ public class BridgeDemo {
     public static void main(String[] args) {
         BuildingCompany buildingCompany = new BuildingCompany();
 
-        ConcreteWallCreator concreteWallCreator = new ConcreteWallCreator();
+        ConcreteSlabWallCreator concreteSlabWallCreator = new ConcreteSlabWallCreator();
         BrickWallCreator brickWallCreator = new BrickWallCreator();
 
         buildingCompany.buildFoundation();
-        buildingCompany.setWallCreator(concreteWallCreator);
+        buildingCompany.setWallCreator(concreteSlabWallCreator);
         buildingCompany.buildRoom();
 
         // switch to another wall type

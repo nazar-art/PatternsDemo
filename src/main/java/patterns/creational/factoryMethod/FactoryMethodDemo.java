@@ -42,6 +42,11 @@ class CommonLogger implements ILogger {
     }
 }
 
+enum LoggingProviders {
+    CommonLogger,
+    AdvancedLogger
+}
+
 class LoggerProviderFactory {
     public static ILogger getLoggerProvider(LoggingProviders loggingProviders) {
         switch (loggingProviders) {
@@ -55,19 +60,12 @@ class LoggerProviderFactory {
     }
 }
 
-enum LoggingProviders {
-    CommonLogger,
-    AdvancedLogger
-}
-
 public class FactoryMethodDemo {
     public static void main(String[] args) {
-        ILogger logger = LoggerProviderFactory
-                .getLoggerProvider(LoggingProviders.AdvancedLogger);
+        ILogger logger = LoggerProviderFactory.getLoggerProvider(LoggingProviders.AdvancedLogger);
         logger.logMessage("Hello Factory Method");
 
-        logger = LoggerProviderFactory
-                .getLoggerProvider(LoggingProviders.CommonLogger);
+        logger = LoggerProviderFactory.getLoggerProvider(LoggingProviders.CommonLogger);
         logger.logMessage("Hello again");
     }
 }

@@ -19,7 +19,6 @@ class TeddyToyFactory implements IToyFactory {
 }
 
 class WoodenToyFactory implements IToyFactory {
-
     @Override
     public Bear getBear() {
         return new WoodenBear("Wooden Bear");

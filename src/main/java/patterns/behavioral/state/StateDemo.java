@@ -253,8 +253,8 @@ public class StateDemo {
         order.ship();
         order.currentState();
 
-        order.invoice();
-        order.currentState();
+        /*order.invoice();
+        order.currentState();*/
 
         // add again
         order.addProduct(pepsi);

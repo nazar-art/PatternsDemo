@@ -14,7 +14,7 @@ abstract class MessageSearcher {
     }
 
     // general operations
-    protected void apllyDateCriteria() {
+    protected void applyDateCriteria() {
         System.out.println("Standard date criteria has been applied.");
     }
 
@@ -28,7 +28,7 @@ abstract class MessageSearcher {
 
     // template method
     public String search() {
-        apllyDateCriteria();
+        applyDateCriteria();
         applySendPersonCriteria();
         System.out.println("Template method does some verification accordingly to search algorithm.");
         applyImportantCriteria();
@@ -61,6 +61,18 @@ class UselessMessagesSearcher extends MessageSearcher {
     }
 }
 
+class MediumMessageSearcher extends MessageSearcher {
+
+    MediumMessageSearcher(Date date, String personName) {
+        super(date, personName, ImportanceLevel.MEDIUM);
+    }
+
+    @Override
+    protected void applyImportantCriteria() {
+        System.out.println("Special importance criteria has been formed: MEDIUM");
+    }
+}
+
 enum ImportanceLevel {
     IMPORTANT, MEDIUM, USELESS, INFO
 }
@@ -70,6 +82,8 @@ public class TemplateMethodDemo {
         MessageSearcher searcher = new UselessMessagesSearcher(new Date(), "Harry");
         searcher.search();
         searcher = new ImportantMessagesSearcher(new Date(), "Cay");
+        searcher.search();
+        searcher = new MediumMessageSearcher(new Date(), "Larry");
         searcher.search();
     }
 }

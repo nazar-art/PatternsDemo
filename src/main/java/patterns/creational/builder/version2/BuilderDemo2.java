@@ -73,8 +73,8 @@ class ContentOfProduct {
 
 public class BuilderDemo2 {
     public static void main(String[] args) {
-        ContentOfProduct cocaCola = new ContentOfProduct.Builder(300, 8)
-                .calories(100).sodium(35).carbohydrate(27).build();
+        ContentOfProduct cocaCola = new ContentOfProduct.Builder(300, 8) // main construction
+                .calories(100).sodium(35).carbohydrate(27).build();      // additional creation
         System.out.println(cocaCola);
     }
 }

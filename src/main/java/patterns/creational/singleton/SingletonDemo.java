@@ -3,8 +3,8 @@ package patterns.creational.singleton;
 import org.apache.log4j.Logger;
 
 class LoggerSingleton {
-    private static Logger Log = Logger.getLogger(LoggerSingleton.class);
-    private static LoggerSingleton ourInstance = new LoggerSingleton();
+    private final static Logger Log = Logger.getLogger(LoggerSingleton.class);
+    private final static LoggerSingleton ourInstance = new LoggerSingleton();
     private int logCount = 0;
 
     public static LoggerSingleton getInstance() {

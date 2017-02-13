@@ -47,9 +47,9 @@ enum LoggingProviders {
     AdvancedLogger
 }
 
-class LoggerProviderFactory {
-    public static ILogger getLoggerProvider(LoggingProviders loggingProviders) {
-        switch (loggingProviders) {
+final class LoggerProviderFactory {
+    public static ILogger getLoggerProvider(LoggingProviders providers) {
+        switch (providers) {
             case CommonLogger:
                 return new CommonLogger();
             case AdvancedLogger:

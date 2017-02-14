@@ -125,7 +125,7 @@ public class CommandDemo {
     public static void main(String[] args) {
         Customer customer = new Customer();
 
-        Team team = new Team("X");
+        Team team = new Team("X team");
         List<Requirement> requirements = Arrays.asList(new Requirement("Cool web site"), new Requirement("Ability to book beer on site"));
         ICommand commandX = new YouAsProjectManager(team, requirements);
         customer.addCommand(commandX);

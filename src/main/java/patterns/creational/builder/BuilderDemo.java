@@ -165,6 +165,7 @@ class BuyLaptop {
     public Laptop getLaptop() {
         return laptopBuilder.getLaptop();
     }
+
     // construct additional details
     public void constructLaptop() {
         laptopBuilder.createNewLaptop();

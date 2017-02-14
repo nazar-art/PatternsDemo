@@ -30,6 +30,8 @@ class Brain {
                 leg.kick();
             } else if (heardSound.contains("cool")) {
                 face.smile();
+            } else {
+                System.out.println("Sound you heard: " + ((Ear) bodyPart).getSounds());
             }
         } else if (bodyPart instanceof Eye) {
 //            todo
@@ -90,7 +92,9 @@ class Ear extends BodyPart {
 
     public void hearSomething() {
         System.out.println("Enter what you hear:");
-        sounds = new Scanner(System.in).next();
+
+        Scanner scanner = new Scanner(System.in);
+        sounds = scanner.nextLine();
         changed();
     }
 
@@ -202,18 +206,18 @@ public class MediatorDemo {
         askingPrompt();
         while (scann.hasNext()) {
             input = scann.next();
-            switch (input) {
-                case "Ear":
+            switch (input.toLowerCase()) {
+                case "ear":
                     human.getEar().hearSomething();
                     break;
-                case "Eye":
+                case "eye":
                     human.getEye().seeAround();
                     break;
-                case "Hand":
+                case "hand":
                     human.getHand().feelAround();
                     break;
                 case "q":
-                    System.out.println("Good bye");
+                    System.out.println("Good bye!");
                     System.exit(1);
             }
             askingPrompt();

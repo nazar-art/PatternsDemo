@@ -44,8 +44,7 @@ class SkiResortFacade {
     private SkiResortTicketSystem ticketSystem = new SkiResortTicketSystem();
     private HotelBookingSystem hotelBookingSystem = new HotelBookingSystem();
 
-    public int haveGoodRest(int height, int weight, int feetSize, int skierLevel, int roomQuality)
-    {
+    public int haveGoodRest(int height, int weight, int feetSize, int skierLevel, int roomQuality) {
         int skiPrice = skiRent.rentSki(weight, skierLevel);
         int skiBootsPrice = skiRent.rentBoots(feetSize, skierLevel);
         int polePrice = skiRent.rentPole(height);
@@ -55,8 +54,7 @@ class SkiResortFacade {
         return skiPrice + skiBootsPrice + polePrice + oneDayTicketPrice + hotelPrice;
     }
 
-    public int haveRestWithOwnSkis()
-    {
+    public int haveRestWithOwnSkis() {
         return ticketSystem.buyOneDayTicket();
     }
 }

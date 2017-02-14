@@ -77,7 +77,7 @@ class BestFriend extends WeirdCafeVisitor {
     @Override
     protected void handleFood(Food food) {
         if (food.getIngredients().contains("Meat")) {
-            System.out.printf("BestFriend: I just ate %s. It was testy.%n", food.getName());
+            System.out.printf("BestFriend: I just ate %s. It was tasty.%n", food.getName());
             return;
         } else if (food.getIngredients().contains("Coffee") && coffeeContainingFood.size() < 1) {
             coffeeContainingFood.add(food);

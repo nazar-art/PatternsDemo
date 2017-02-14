@@ -112,7 +112,7 @@ class ArmyIterator {
     }
 
     public Soldier next() {
-        Soldier nextSoldier = null;
+        Soldier nextSoldier;
         // we still not iterated all soldiers in current group
         if (currentGroup < army.getArmyGroups().size()) {
             if (currentSoldierGroup < army.getArmyGroups().get(currentGroup).getSoldiers().size()) {
@@ -157,7 +157,7 @@ public class IteratorDemo {
 
     private static void fillArmyGroup(Group group, String groupName, int count) {
         for (int i = 1; i <= count; i++) {
-            group.addSoldier(new Soldier(groupName+i));
+            group.addSoldier(new Soldier(groupName + i));
         }
     }
 }

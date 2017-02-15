@@ -3,28 +3,18 @@ package patterns.behavioral.interpreter;
 import java.util.*;
 
 enum GoodsInstances {
-    BED("Bad"), TV("TV"), LAPTOP("Laptop");
-
-    private String goodName;
-
-    GoodsInstances(String goodName) {
-        this.goodName = goodName;
-    }
-
-    public String getGoodName() {
-        return goodName;
-    }
+    BED, TV, LAPTOP;
 
     @Override
     public String toString() {
         return "GoodsInstances{" +
-                "goodName='" + goodName + '\'' +
+                "goodName='" + this + '\'' +
                 '}';
     }
 
     public GoodsInstances fromString(String goodName) {
         for (GoodsInstances goodsInstance : GoodsInstances.values()) {
-            if (goodsInstance.getGoodName().equalsIgnoreCase(goodName)) {
+            if (goodsInstance.toString().equalsIgnoreCase(goodName.toUpperCase())) {
                 return goodsInstance;
             } else {
                 throw new IllegalArgumentException("Invalid String value: " + goodName);
@@ -67,20 +57,20 @@ abstract class Goods {
 }
 
 class GoodsPackage extends Goods {
-    public List<? super Goods> goodsInside = new ArrayList<>();
+    public List<Goods> goodsInside = new ArrayList<>();
 
     public GoodsPackage() {
     }
 
-    public GoodsPackage(List<? super Goods> goodsInside) {
+    public GoodsPackage(List<Goods> goodsInside) {
         this.goodsInside = goodsInside;
     }
 
     @Override
     public Integer interpret(CurrentPricesContext context) {
         int totalSum = 0;
-        for (Iterator<? super Goods> iter = goodsInside.iterator(); iter.hasNext();) {
-            Goods good = (Goods) iter.next();
+        for (Iterator<Goods> iter = goodsInside.iterator(); iter.hasNext();) {
+            Goods good = iter.next();
             totalSum += good.interpret(context);
         }
         /*for (Goods goods : goodsInside) {
@@ -89,11 +79,11 @@ class GoodsPackage extends Goods {
         return totalSum;
     }
 
-    public List<? super Goods> getGoodsInside() {
+    public List<Goods> getGoodsInside() {
         return goodsInside;
     }
 
-    public void setGoodsInside(List<? super Goods> goodsInside) {
+    public void setGoodsInside(List<Goods> goodsInside) {
         this.goodsInside = goodsInside;
     }
 }

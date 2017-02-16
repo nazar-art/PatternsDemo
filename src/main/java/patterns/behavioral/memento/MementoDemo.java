@@ -74,10 +74,12 @@ class Caretacker {
 
     public void F5() {
         quickSaves.push(game.saveGame());
+        System.out.println("F5 pressed: save state");
     }
 
     public void F9() {
         game.loadGame(quickSaves.peek());
+        System.out.println("F9 pressed: revert to saved state");
     }
 }
 

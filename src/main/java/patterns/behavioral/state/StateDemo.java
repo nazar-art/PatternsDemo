@@ -7,6 +7,11 @@ class Product {
     private String name;
     private double price;
 
+    public Product(String name, double price) {
+        this.name = name;
+        this.price = price;
+    }
+
     public String getName() {
         return name;
     }
@@ -234,9 +239,7 @@ class Cancel extends OrderState {
 
 public class StateDemo {
     public static void main(String[] args) {
-        Product pepsi = new Product();
-        pepsi.setName("Pepsi Cola");
-        pepsi.setPrice(18D);
+        Product pepsi = new Product("Pepsi Cola", 18d);
 
         Order order = new Order();
         order.currentState();
@@ -252,9 +255,6 @@ public class StateDemo {
 
         order.ship();
         order.currentState();
-
-        /*order.invoice();
-        order.currentState();*/
 
         // add again
         order.addProduct(pepsi);

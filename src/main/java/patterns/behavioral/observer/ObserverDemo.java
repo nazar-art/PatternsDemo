@@ -126,5 +126,7 @@ public class ObserverDemo {
         boxFight.nextRound();
         boxFight.nextRound();
         boxFight.nextRound();
+        boxFight.nextRound();
+        boxFight.nextRound();
     }
 }

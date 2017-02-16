@@ -48,6 +48,7 @@ public class AdapterDemo {
         ElectricityCustomer.chargeLaptop(newElectricitySystem);
 
         OldElectricitySystem oldElectricitySystem = new OldElectricitySystem();
-        ElectricityCustomer.chargeLaptop(new Adapter(oldElectricitySystem));
+        Adapter adapter = new Adapter(oldElectricitySystem);
+        ElectricityCustomer.chargeLaptop(adapter);
     }
 }

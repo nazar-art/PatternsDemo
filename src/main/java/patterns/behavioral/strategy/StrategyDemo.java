@@ -42,7 +42,7 @@ class Myself {
     public void goOutside() {
         String clothes = wearingStrategy.getClothes();
         String accessories = wearingStrategy.getAccessories();
-        System.out.printf("Today I wore %s and took %s%n", clothes, accessories);
+        System.out.printf("Today I wore: %s and took: %s%n", clothes, accessories);
     }
 }
 
@@ -62,6 +62,8 @@ class DefaultWearingStrategy implements IWearingStrategy {
 public class StrategyDemo {
     public static void main(String[] args) {
         Myself meToday = new Myself();
+        meToday.goOutside();
+
         meToday.changeStrategy(new RainWeatherStrategy());
         meToday.goOutside();
 

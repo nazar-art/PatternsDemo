@@ -47,24 +47,30 @@ abstract class Unit {
 }
 
 class Goblin extends Unit {
-    public Goblin() {
+    public Goblin(boolean isFlyweight) {
         name = "Goblin";
         health = 8;
-        // without Flyweight
-//        avatar = Image.load("Goblin.jpg");
-        // with Flyweight
-        avatar = UnitImageFactory.createGoblinImage();
+        if (isFlyweight) {
+            // with Flyweight
+            avatar = UnitImageFactory.createGoblinImage();
+        } else {
+            // without Flyweight
+            avatar = Image.load("Goblin.jpg");
+        }
     }
 }
 
 class Dragon extends Unit {
-    public Dragon() {
+    public Dragon(boolean isFlyweight) {
         name = "Dragon";
         health = 50;
-        // without Flyweight
-//        avatar = Image.load("Dragon.jpg");
-        // // with Flyweight
-        avatar = UnitImageFactory.createDragonImage();
+        if (isFlyweight) {
+            // with Flyweight
+            avatar = UnitImageFactory.createDragonImage();
+        } else {
+            // without Flyweight
+            avatar = Image.load("Dragon.jpg");
+        }
     }
 }
 
@@ -89,13 +95,13 @@ class UnitImageFactory {
 }
 
 class Parser {
-    public List<Unit> parseHtml() {
+    public List<Unit> parseHtml(boolean isFlyweight) {
         ArrayList<Unit> units = new ArrayList<>();
         for (int i = 0; i < 150; i++) {
-            units.add(new Dragon());
+            units.add(new Dragon(isFlyweight));
         }
         for (int i = 0; i < 500; i++) {
-            units.add(new Goblin());
+            units.add(new Goblin(isFlyweight));
         }
         System.out.println("Imitations of parsing Dragons and Goblins from HTML page");
         return units;
@@ -110,8 +116,16 @@ public class FlyweightDemo {
     }
 
     public static void main(String[] args) {
-        new Parser().parseHtml();
+        System.out.println("Without Flyweight:");
+        new Parser().parseHtml(false);
+        logMemoryUsage();
 
+        System.out.println("With Flyweight:");
+        new Parser().parseHtml(true);
+        logMemoryUsage();
+    }
+
+    private static void logMemoryUsage() {
         // Get the Java runtime
         Runtime runtime = Runtime.getRuntime();
         // Run the garbage collector
@@ -119,7 +133,7 @@ public class FlyweightDemo {
         // Calculate the used memory
         long memory = runtime.totalMemory() - runtime.freeMemory();
         System.out.println("Used memory is bytes: " + memory);
-        System.out.printf("Used memory is megabytes: %d.4", bytesToMegabytes(memory));
+        System.out.printf("Used memory is megabytes: %d.4\n", bytesToMegabytes(memory));
     }
 }
 

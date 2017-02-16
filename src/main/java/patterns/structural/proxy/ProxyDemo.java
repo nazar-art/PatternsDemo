@@ -111,7 +111,7 @@ public class ProxyDemo {
             num++;
             proxy.defuseBomb();
         } catch (BadConnectionException e) {
-            System.out.printf("\nFu..! Huston we on trouble! Exception occurred - %s%nTake human control under bomb defuse robot:%n", e.getMessage());
+            System.out.printf("\nFu..! Huston we on trouble! Exception occurred - %s%nTake human control under bomb defuse robot!%n", e.getMessage());
             planB(num);
         }
     }

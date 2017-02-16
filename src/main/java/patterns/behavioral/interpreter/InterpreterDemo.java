@@ -4,24 +4,6 @@ import java.util.*;
 
 enum GoodsInstances {
     BED, TV, LAPTOP;
-
-    @Override
-    public String toString() {
-        return "GoodsInstances{" +
-                "goodName='" + this + '\'' +
-                '}';
-    }
-
-    public GoodsInstances fromString(String goodName) {
-        for (GoodsInstances goodsInstance : GoodsInstances.values()) {
-            if (goodsInstance.toString().equalsIgnoreCase(goodName.toUpperCase())) {
-                return goodsInstance;
-            } else {
-                throw new IllegalArgumentException("Invalid String value: " + goodName);
-            }
-        }
-        return null;
-    }
 }
 
 class CurrentPricesContext {
@@ -69,13 +51,9 @@ class GoodsPackage extends Goods {
     @Override
     public Integer interpret(CurrentPricesContext context) {
         int totalSum = 0;
-        for (Iterator<Goods> iter = goodsInside.iterator(); iter.hasNext();) {
-            Goods good = iter.next();
+        for (Goods good : goodsInside) {
             totalSum += good.interpret(context);
         }
-        /*for (Goods goods : goodsInside) {
-            totalSum += goods.interpret(context);
-        }*/
         return totalSum;
     }
 
@@ -141,9 +119,11 @@ public class InterpreterDemo {
         truck.goodsInside.add(new Bed());
         Bed bed = new Bed();
         List<Bed> goodsList = Arrays.asList(bed);
+
 //        GoodsPackage doubleTriplePackedBed = new GoodsPackage(goodsList);
 //        doubleTriplePackedBed.setGoodsInside(Arrays.asList(new GoodsPackage(Arrays.asList(bed))));
 //        truck.goodsInside.add(Arrays.asList(doubleTriplePackedBed));
+
         truck.goodsInside.add(new TV());
         truck.goodsInside.add(new TV());
         truck.goodsInside.add(new TV());

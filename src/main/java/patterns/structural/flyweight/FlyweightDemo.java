@@ -1,5 +1,8 @@
 package patterns.structural.flyweight;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -10,40 +13,17 @@ class Image {
     public static Image load(String name) {
         Image image = new Image();
         for (int i = 0; i < 10000; i++) {
-            image.imitatesHugeImages.add(String.format("abcdefg: %d", i));
+            image.imitatesHugeImages.add(String.format("%s: %d", name, i));
         }
         return image;
     }
 }
 
+@Getter @Setter
 abstract class Unit {
     protected String name;
     protected int health;
     protected Image avatar;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getHealth() {
-        return health;
-    }
-
-    public void setHealth(int health) {
-        this.health = health;
-    }
-
-    public Image getAvatar() {
-        return avatar;
-    }
-
-    public void setAvatar(Image avatar) {
-        this.avatar = avatar;
-    }
 }
 
 class Goblin extends Unit {
@@ -115,16 +95,6 @@ public class FlyweightDemo {
         return bytes / MEGABYTE;
     }
 
-    public static void main(String[] args) {
-        System.out.println("Without Flyweight:");
-        new Parser().parseHtml(false);
-        logMemoryUsage();
-
-        System.out.println("With Flyweight:");
-        new Parser().parseHtml(true);
-        logMemoryUsage();
-    }
-
     private static void logMemoryUsage() {
         // Get the Java runtime
         Runtime runtime = Runtime.getRuntime();
@@ -135,6 +105,18 @@ public class FlyweightDemo {
         System.out.println("Used memory is bytes: " + memory);
         System.out.printf("Used memory is megabytes: %d.4\n", bytesToMegabytes(memory));
     }
+
+    public static void main(String[] args) {
+        System.out.println("Without Flyweight:");
+        new Parser().parseHtml(false);
+        logMemoryUsage();
+
+        System.out.println();
+        System.out.println("With Flyweight:");
+        new Parser().parseHtml(true);
+        logMemoryUsage();
+    }
+
 }
 
 /*Output:

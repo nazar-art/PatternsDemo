@@ -1,5 +1,8 @@
 package patterns.behavioral.visitor;
 
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -46,7 +49,6 @@ class PlumbingSystemValidator implements IVisitor {
 
     @Override
     public void visit(Room room) {
-
     }
 }
 
@@ -62,11 +64,12 @@ interface IElement {
     void accept(IVisitor visitor);
 }
 
+@Getter
 class OfficeBuilding implements IElement {
-    private List<Floor> floors = new ArrayList<>();
-    private String buildingName;
     public int age;
-    private int electricitySystemId;
+    private final String buildingName;
+    private final int electricitySystemId;
+    private final List<Floor> floors = new ArrayList<>();
 
     @Override
     public void accept(IVisitor visitor) {
@@ -86,26 +89,13 @@ class OfficeBuilding implements IElement {
         floors.add(floor);
     }
 
-    public List<Floor> getFloors() {
-        return floors;
-    }
-
-    public String getBuildingName() {
-        return buildingName;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public int getElectricitySystemId() {
-        return electricitySystemId;
-    }
 }
 
+@Getter
 class Floor implements IElement {
-    private List<Room> rooms = new ArrayList<>();
-    private int floorNumber;
+
+    private final int floorNumber;
+    private final List<Room> rooms = new ArrayList<>();
 
     Floor(int floorNumber) {
         this.floorNumber = floorNumber;
@@ -122,30 +112,17 @@ class Floor implements IElement {
     public void addRoom(Room room) {
         rooms.add(room);
     }
-
-    public List<Room> getRooms() {
-        return rooms;
-    }
-
-    public int getFloorNumber() {
-        return floorNumber;
-    }
 }
 
+@Getter
+@RequiredArgsConstructor
 class Room implements IElement {
-    private int roomNumber;
 
-    Room(int roomNumber) {
-        this.roomNumber = roomNumber;
-    }
+    private final int roomNumber;
 
     @Override
     public void accept(IVisitor visitor) {
         visitor.visit(this);
-    }
-
-    public int getRoomNumber() {
-        return roomNumber;
     }
 }
 

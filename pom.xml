@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.demo</groupId>
-    <artifactId>PatternsDemo</artifactId>
+    <artifactId>patterns-demo</artifactId>
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
 
@@ -37,7 +37,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.16.20</version>
+            <version>1.18.16</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
